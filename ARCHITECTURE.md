@@ -60,3 +60,30 @@ To eliminate manual work and ensure data consistency, we will build a series of 
     3.  **Notify Key Personnel:** The Flow will send an automated **email alert** to the Volunteer Coordinator and the Supply Manager. This notification will inform them that the total animal count has decreased, allowing them to accurately plan for volunteer shifts and inventory needs (food, medicine, toys, etc.).
     4.  **Create a Follow-Up Task:** It will create a new "Follow-Up Task" and assign it to a staff member to call the new family in two weeks to see how everything is going.
     5.  **Send "Welcome Home" Email:** It will send a beautiful, pre-written "Congratulations & Welcome Home!" email to the adopter, including helpful tips for the first few weeks with their new family member.
+
+
+## 3. User Interface (UI) & User Experience (UX)
+
+The user interface will be designed to be simple, intuitive, and efficient, allowing the staff and volunteers to focus on their mission of animal care.
+
+### **The Public-Facing Volunteer Signup Page**
+
+To make the signup process more noticeable and catchy, we will create a dedicated and welcoming landing page on the Crabby Cakes Rescues website. This page will feature compelling photos of animals and success stories. At the bottom of this page, we will embed a simple **Salesforce Web-to-Lead Form** with required fields for all basic contact info, ensuring we never receive incomplete applications.
+
+### **The Internal Volunteer Record Page**
+
+Each `Volunteer__c` record will have a custom **Lightning Record Page** layout designed for clarity and ease of use.
+
+* **Highlights Panel:** The top of the page will prominently display the volunteer's **Photo**, their `First Name` and `Last Name`, their current `Status` (e.g., 'Applicant'), and their total `Volunteer_Hours__c`.
+* **Contact & Skills Details:** A clean "Details" section will contain their contact information, their `Animal_Preference__c` (e.g., "Dogs," "Cats," "Small Animals"), and a checklist of their `Skills__c`.
+* **Team Structure:** A new lookup field, `Team_Lead__c`, will clearly display their designated point of contact within the organization, distributing the management workload.
+* **Activity History:** Related lists will show a complete history of their upcoming and past `Shifts`, as well as any `Donations` they have made, providing a full 360-degree view of their contributions.
+
+### **The "Mission Control" Dashboard**
+
+To provide the "snapshot" view you need for grants and loans, we will build a central **Salesforce Dashboard** called "Volunteer Mission Control." It will feature real-time charts and metrics, including:
+
+* A large metric component for the **Total Active Volunteer Count**.
+* A gauge for **New Applicants This Month vs. Goal**.
+* A bar chart showing **Total Volunteer Hours by Month**.
+* The "cute counter" you mentioned: a dynamic metric showing **Total Animals Adopted**, which we can represent with a paw print icon!
